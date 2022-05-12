@@ -52,12 +52,11 @@ struct MainView: View {
                     
                 }
             
-            settingsView()
-                .tabItem{
-                    Image(systemName: "gearshape")
-                    Text("Settings")
-                    
-                }
+            //settingsView()
+            //  .tabItem{
+            //        Image(systemName: "gearshape")
+            //        Text("Settings")
+            //    }
             
             
             

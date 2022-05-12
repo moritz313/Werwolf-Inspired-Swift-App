@@ -9,6 +9,9 @@ struct QRGeneratorView: View {
     @State private var text = ""
     @State private var showQR = false
     
+    @State var items : [Any] = []
+    @State var sheet = false
+    
     @State private var showQR1 = false
     @State private var showQR2 = false
     @State private var showQR3 = false
@@ -385,19 +388,217 @@ struct QRGeneratorView: View {
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                 
             }
-                Button("share"){
-                    
-                    
-                }
-                .buttonStyle(.borderedProminent)
-                .foregroundColor(.white)
-                .tint(.black)
+                
             
             }
+            
+            HStack{
+            
+            Button("Share"){
+                items.removeAll()
+                if(showQR1){
+                    let bottomImage = UIImage(named: "Player1")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player1)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR2){
+                    let bottomImage = UIImage(named: "Player2")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player2)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR3){
+                    let bottomImage = UIImage(named: "Player3")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player3)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR4){
+                    let bottomImage = UIImage(named: "Player4")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player4)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR5){
+                    let bottomImage = UIImage(named: "Player5")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player5)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR6){
+                    let bottomImage = UIImage(named: "Player6")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player6)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR7){
+                    let bottomImage = UIImage(named: "Player7")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player7)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                } else if(showQR8){
+                    let bottomImage = UIImage(named: "Player8")
+                    let topImage = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player8)")!)!
+                    let size = CGSize(width: 1500, height: 1500)
+                    UIGraphicsBeginImageContext(size)
+                    let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+                    let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+                    bottomImage!.draw(in: areaSize1)
+                    topImage.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+                    let newImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+                    UIGraphicsEndImageContext()
+                    items.append(newImage)
+                }
+                
+                sheet.toggle()
+                
+            }
+            .buttonStyle(.borderedProminent)
+            .foregroundColor(.white)
+            .tint(.black)
+            .sheet(isPresented: $sheet,  content: {
+                ShareSheet(items: items)
+            })
             
         }
         
         
+        Button("Save All"){
+            items.removeAll()
+            
+            let bottomImage1 = UIImage(named: "Player1")
+            let topImage1 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player1)")!)!
+            let size = CGSize(width: 1500, height: 1500)
+            UIGraphicsBeginImageContext(size)
+            let areaSize1 = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+            let areaSize2 = CGRect(x: 238, y: 238, width: size.width - 476, height: size.height - 476)
+            bottomImage1!.draw(in: areaSize1)
+            topImage1.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage1:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage1)
+            
+            let bottomImage2 = UIImage(named: "Player2")
+            let topImage2 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player2)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage2!.draw(in: areaSize1)
+            topImage2.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage2:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage2)
+        
+            let bottomImage3 = UIImage(named: "Player3")
+            let topImage3 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player3)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage3!.draw(in: areaSize1)
+            topImage3.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage3:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage3)
+           
+            let bottomImage4 = UIImage(named: "Player4")
+            let topImage4 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player4)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage4!.draw(in: areaSize1)
+            topImage4.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage4:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage4)
+            
+            let bottomImage5 = UIImage(named: "Player5")
+            let topImage5 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player5)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage5!.draw(in: areaSize1)
+            topImage5.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage5:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage5)
+            
+            let bottomImage6 = UIImage(named: "Player6")
+            let topImage6 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player6)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage6!.draw(in: areaSize1)
+            topImage6.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage6:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage6)
+            
+            let bottomImage7 = UIImage(named: "Player7")
+            let topImage7 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player7)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage7!.draw(in: areaSize1)
+            topImage7.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage7:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage7)
+            
+            let bottomImage8 = UIImage(named: "Player8")
+            let topImage8 = UIImage(data: getQRCodeDate(text: "\(UsefulValues.Player8)")!)!
+            UIGraphicsBeginImageContext(size)
+            bottomImage8!.draw(in: areaSize1)
+            topImage8.draw(in: areaSize2, blendMode: .normal, alpha: 0.8)
+            let newImage8:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+            UIGraphicsEndImageContext()
+            items.append(newImage8)
+               
+            
+            
+                sheet.toggle()
+            
+        }
+        .buttonStyle(.borderedProminent)
+        .foregroundColor(.white)
+        .tint(.black)
+        .sheet(isPresented: $sheet,  content: {
+            ShareSheet(items: items)
+        })
+        
+    }
+}
         
     }
     
@@ -414,4 +615,23 @@ struct QRGeneratorView: View {
         let uiimage = UIImage(ciImage: scaledCIImage)
         return uiimage.pngData()!
     }
-}
+    
+    
+    //Share Sheet
+    
+    struct ShareSheet : UIViewControllerRepresentable {
+        
+        //Data
+        var items : [Any]
+        func makeUIViewController(context: Context) -> some UIActivityViewController {
+            let controller = UIActivityViewController(activityItems: items, applicationActivities: nil)
+            
+            return controller
+        }
+        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+            
+        }
+        
+    }
+    
+
